@@ -2,7 +2,6 @@ package com.ista.codingChallenge.controllers;
 
 import com.ista.codingChallenge.model.University;
 import com.ista.codingChallenge.service.UniversityService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +15,11 @@ import java.util.Optional;
 @CrossOrigin(origins = "http://localhost:5173")
 public class UniversityController {
 
-    @Autowired
     private UniversityService universityService;
+
+    public UniversityController(UniversityService universityService) {
+        this.universityService = universityService;
+    }
 
     @GetMapping
     public List<University> displayAllData() {

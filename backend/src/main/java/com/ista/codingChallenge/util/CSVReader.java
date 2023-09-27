@@ -24,8 +24,7 @@ public class CSVReader {
             }
             reader.close();
         } catch (IOException e) {
-            //e.printStackTrace();  // Print the stack trace if an IOException occurs
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return lines;

@@ -3,7 +3,6 @@ package com.ista.codingChallenge.util;
 import com.ista.codingChallenge.model.University;
 import com.ista.codingChallenge.repositories.UniversityRepository;
 import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
@@ -11,11 +10,14 @@ import java.util.List;
 @Configuration
 public class DatabasePopulator {
 
-    @Autowired
+
     private UniversityRepository repository;
-    @Autowired
     private CSVReader csvReader;
 
+    public DatabasePopulator(UniversityRepository repository, CSVReader csvReader) {
+        this.repository = repository;
+        this.csvReader = csvReader;
+    }
 
     @PostConstruct
     public void loadCSVData() {
