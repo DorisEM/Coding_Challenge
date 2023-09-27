@@ -1,6 +1,6 @@
 # Coding_Challenge
 
-This application is developed using Spring Boot for the backend (API) services, and React for the frontend user interface.
+This application is developed using Spring Boot for the backend (API) services, H2 as in-memory database and React for the frontend user interface.
 
 Please ensure that you have:
 - Java installed for running the Spring Boot application.
