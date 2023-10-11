@@ -11,4 +11,6 @@ Then follow by navigating to the frontend directory, open a terminal and run the
 then "npm run dev" to start the web server. The url will be "http://localhost:5173/". If the browser doesn't open automatically, press the letter "o"
 and it should open to the right url.
 
+The data displayed on the table can be sorted by id or country(asc.).
+
 Thank you!
